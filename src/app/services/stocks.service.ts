@@ -27,12 +27,14 @@ export class StocksService {
     return stocks.slice();
   }
 
-  add(stock: string) {
+  add(stock: string): Array<string> {
     stocks.push(stock);
+    return stocks;
   }
 
-  remove(stock: string) {
+  remove(stock: string): Array<string> {
     stocks.splice(stocks.indexOf(stock), 1);
+    return stocks;
   }
 
   load(symbols) {
