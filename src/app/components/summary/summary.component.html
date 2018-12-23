@@ -1,6 +1,7 @@
 <mat-card [ngClass]="{increase: isPositive(), decrease: isNegative()}" >
-  <mat-card-header>
+  <span>
 
+  <mat-card-header>
     <mat-card-title>
       <h4>
       {{stock?.symbol?.toUpperCase()}}
@@ -12,5 +13,6 @@
     </mat-card-title>
 
   </mat-card-header>
+  </span>
 
 </mat-card>

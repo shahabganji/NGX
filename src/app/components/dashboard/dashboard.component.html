@@ -1,0 +1,11 @@
+<mat-grid-list cols="12">
+  <mat-grid-tile *ngIf="!stocks" colspan="12" >
+    Loading ...
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="3" *ngFor="let stock of stocks">
+    <app-summary [stock]="stock">
+    </app-summary>
+  </mat-grid-tile>
+
+</mat-grid-list>
