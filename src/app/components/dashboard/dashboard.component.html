@@ -1,10 +1,10 @@
 <mat-grid-list cols="12">
-  <mat-grid-tile *ngIf="!stocks" colspan="12" >
-    Loading ...
+  <mat-grid-tile *ngIf="stocks.length == 0" colspan="12" >
+    <p style="color: whitesmoke;">Loading ...</p>
   </mat-grid-tile>
 
   <mat-grid-tile colspan="3" *ngFor="let stock of stocks">
-    <app-summary [stock]="stock"></app-summary>
+    <app-summary [stock]="stock" style="width:100%"></app-summary>
   </mat-grid-tile>
 
 </mat-grid-list>
