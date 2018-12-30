@@ -1,26 +1,26 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {MatButtonModule, MatCardModule, MatToolbarModule, MatGridListModule,
-   MatFormFieldModule, MatInputModule, MatDividerModule, MatTableModule, MatListModule} from '@angular/material';
-   import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import {
+  MatButtonModule, MatCardModule, MatToolbarModule, MatGridListModule,
+  MatFormFieldModule, MatInputModule, MatDividerModule, MatTableModule, MatListModule
+} from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HttpClientModule } from '@angular/common/http';
-import { StocksService } from './services/stocks.service';
-import { SummaryComponent } from './components/summary/summary.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { ManageComponent } from './components/manage/manage.component';
+
 import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   // list of allowed components inside this module
   declarations: [
     AppComponent,
-    SummaryComponent,
     DashboardComponent,
-    ManageComponent
+    NavbarComponent
   ],
   // list of other modules that this module depends upon
   imports: [
@@ -44,7 +44,6 @@ import { FormsModule } from '@angular/forms';
   ],
   // list of services that this module depends upon
   providers: [
-    StocksService
   ],
   // the component to bootstrap this module
   bootstrap: [AppComponent]

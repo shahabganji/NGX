@@ -1,20 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Stock Tracker</span>
-    <span class="spacer"></span>
-    <a mat-raised-button class="my-margin" color="accent" [routerLink]="['/']" >
-      Dashboard
-    </a>
-    <a mat-raised-button class="my-margin" color="accent" [routerLink]="['/manage']" >
-      Manage
-    </a>
-  </mat-toolbar-row>
-</mat-toolbar>
+<app-navbar></app-navbar>
 
 <br />
 
 <main class="mdl-layout__content" style="padding: 20px;">
-  <router-outlet></router-outlet>
+  <app-dashboard></app-dashboard>
 </main>
