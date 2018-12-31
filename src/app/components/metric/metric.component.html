@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-toolbar>
+    <mat-toolbar-row [class.danger]="IsDanger" [class.success]="!IsDanger">
+      {{title}}
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-card-title>
+    <h4>
+      {{value}} / {{max}} ( {{value / max | percent:'1.0-2'}} )
+    </h4>
+  </mat-card-title>
+
+  <mat-card-content>
+    {{description}}
+  </mat-card-content>
+
+  <mat-progress-bar mode="determinate" [value]="value/max * 100" [color]="IsDanger ? 'warn':'accent'">
+
+  </mat-progress-bar>
+
+</mat-card>

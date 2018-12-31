@@ -1,3 +1,9 @@
-<p>
-  {{cluster1 | json}}
-</p>
+<div fxLayout="row" fxLayoutAlign="space-around center">
+
+  <app-metric fxFlex="30" title="CPU" description="utilization of cpu cores" [used]="cpu.used" [available]="cpu.available">
+  </app-metric>
+
+  <app-metric fxFlex="30" title="Memory" description="utilization of memory in GB" [used]="mem.used" [available]="mem.available">
+  </app-metric>
+
+</div>

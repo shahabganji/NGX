@@ -34,7 +34,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     this.interval = setInterval(() => {
       this.generateData();
-    }, 15000);
+    }, 3000);
   }
 
   ngOnDestroy(): void {
