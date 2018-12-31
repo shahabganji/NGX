@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { InvokeFunctionExpr } from '@angular/compiler';
 
 @Component({
   selector: 'app-metric',
@@ -10,11 +9,25 @@ export class MetricComponent {
 
   @Input() title = '';
   @Input() description = '';
-  // tslint:disable-next-line:no-input-rename
-  @Input('used') value = 0;
-  // tslint:disable-next-line:no-input-rename
-  @Input('available') max = 100;
 
+  private _value = 0;
+  private _max = 100;
+
+  @Input('used')
+  set value(value: number) {
+    if (isNaN(value)) { value = 0; }
+
+    this._value = value;
+  }
+  get value(): number { return this._value; }
+
+  @Input('available')
+  set max(value: number) {
+    if (isNaN(value)) { value = 0; }
+
+    this._max = value;
+  }
+  get max(): number { return this._max; }
 
   constructor() { }
 
