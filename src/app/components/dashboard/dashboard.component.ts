@@ -1,12 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 
-interface IMetric {
+export interface IMetric {
   used: number;
   available: number;
 }
 
-interface INode {
+export interface INode {
   name: string;
   cpu: IMetric;
   mem: IMetric;

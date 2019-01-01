@@ -15,6 +15,8 @@ import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MetricComponent } from './components/metric/metric.component';
+import { NodesComponent } from './components/nodes/nodes.component';
+import { NodesRowComponent } from './components/nodes-row/nodes-row.component';
 
 @NgModule({
   // list of allowed components inside this module
@@ -22,7 +24,9 @@ import { MetricComponent } from './components/metric/metric.component';
     AppComponent,
     DashboardComponent,
     NavbarComponent,
-    MetricComponent
+    MetricComponent,
+    NodesComponent,
+    NodesRowComponent
   ],
   // list of other modules that this module depends upon
   imports: [

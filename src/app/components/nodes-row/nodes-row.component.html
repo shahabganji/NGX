@@ -1,0 +1,23 @@
+<mat-grid-tile>
+  {{node.name}}
+</mat-grid-tile>
+
+<mat-grid-tile [style.background-color.maroon]="isDanger('cpu')">
+  {{node.cpu.used}} / {{node.cpu.available}}
+</mat-grid-tile>
+<mat-grid-tile [style.background-color.maroon]="isDanger('cpu')">
+  {{ node.cpu.used / node.cpu.available | percent }}
+</mat-grid-tile>
+
+
+<mat-grid-tile [style.background-color.maroon]="isDanger('mem')">
+  {{node.mem.used}} / {{node.mem.available}}
+</mat-grid-tile>
+<mat-grid-tile [style.background-color.maroon]="isDanger('mem')">
+  {{ node.mem.used / node.mem.available | percent }}
+</mat-grid-tile>
+
+
+<mat-grid-tile>
+  <button mat-raised-button color="warn">View</button>
+</mat-grid-tile>

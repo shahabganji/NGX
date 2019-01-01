@@ -1,0 +1,17 @@
+<mat-grid-list cols="6">
+  <mat-grid-tile>
+    Node
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="2">
+    CPU
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="2">
+    Memory
+  </mat-grid-tile>
+  <mat-grid-tile>
+    Details
+  </mat-grid-tile>
+
+  <ng-content></ng-content>
+
+</mat-grid-list>
