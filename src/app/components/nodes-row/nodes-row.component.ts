@@ -1,11 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { INode } from '../dashboard/dashboard.component';
 
 @Component({
   // tslint:disable-next-line:component-selector
   selector: '[app-nodes-row]',
   templateUrl: './nodes-row.component.html',
-  styleUrls: ['./nodes-row.component.scss']
+  styleUrls: ['./nodes-row.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NodesRowComponent {
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  // tslint:disable-next-line:no-output-on-prefix
+  @Output() onRefresh: EventEmitter<null> = new EventEmitter<null>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  refresh() {
+      this.onRefresh.emit();
   }
 
 }
