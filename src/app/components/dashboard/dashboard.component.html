@@ -12,10 +12,24 @@
 
   <hr />
 
-  <div app-nodes>
-    <app-nodes-row [node]="cluster1[0]">
+  <br /><br /><br />
 
-    </app-nodes-row>
-  </div>
+  <fieldset>
+    <legend>Cluster 1</legend>
+    <table app-nodes>
+      <tr app-nodes-row [node]="n" *ngFor="let n of cluster1">
+      </tr>
+    </table>
+
+  </fieldset>
+  <hr />
+
+  <fieldset>
+    <legend>Cluster 2</legend>
+    <table app-nodes>
+      <tr app-nodes-row [node]="n" *ngFor="let n of cluster2">
+      </tr>
+    </table>
+  </fieldset>
 
 </div>

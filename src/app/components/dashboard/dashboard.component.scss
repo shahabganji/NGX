@@ -1,3 +1,17 @@
 mat-grid-tile app-metric {
   width: 100%;
 }
+
+fieldset table {
+  width: 100%;
+}
+
+hr {
+  color: gray;
+  border-style: inset;
+  border-width: 1px;
+
+  /* margin: 0.5em auto; */
+  margin-left: 0;
+  margin-right: 0;
+}

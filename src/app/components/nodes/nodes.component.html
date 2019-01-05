@@ -1,17 +1,36 @@
-<mat-grid-list cols="6">
-  <mat-grid-tile>
-    Node
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="2">
-    CPU
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="2">
-    Memory
-  </mat-grid-tile>
-  <mat-grid-tile>
-    Details
-  </mat-grid-tile>
+<thead>
+  <tr>
+    <th>Node</th>
+    <th [colSpan]="2">CPU</th>
+    <th [colSpan]="2">Memory</th>
+    <th>Details</th>
+  </tr>
+</thead>
 
   <ng-content></ng-content>
 
-</mat-grid-list>
+<tfoot>
+    <!-- <ng-content></ng-content> -->
+</tfoot>
+
+<!-- <div>
+  <div class="nodes">
+    <div style="grid-column: 1; display: flex; align-content: center">
+      Node
+    </div>
+    <div style="grid-column: 2 / 4; display: flex; align-content: center">
+      CPU
+    </div>
+    <div style="grid-column: 4 / 6; display: flex; align-content: center">
+      Memory
+    </div>
+    <div style="grid-column: 6; display: flex; align-content: center">
+      Details
+    </div>
+  </div>
+
+  <ng-content class="content"></ng-content>
+
+</div>
+
+-->

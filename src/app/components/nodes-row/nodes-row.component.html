@@ -1,23 +1,37 @@
-<mat-grid-tile>
+<th scope="row">{{node.name}}</th>
+<td [class.table-danger]="isDanger('cpu')">
+  {{node.cpu.used}}/{{node.cpu.available}}
+</td>
+<td [class.table-danger]="isDanger('cpu')">
+  ({{node.cpu.used / node.cpu.available | percent}})
+</td>
+<td [class.table-danger]="isDanger('mem')">
+  {{node.mem.used}}/{{node.mem.available}}
+</td>
+<td [class.table-danger]="isDanger('mem')">
+  ({{node.mem.used / node.mem.available | percent}})
+</td>
+<td><button class="btn btn-secondary">View</button></td>
+
+<!-- <div style="grid-column: 1;">
   {{node.name}}
-</mat-grid-tile>
+</div>
 
-<mat-grid-tile [style.background-color.maroon]="isDanger('cpu')">
+<div style="grid-column: 2;" [style.background-color.maroon]="isDanger('cpu')">
   {{node.cpu.used}} / {{node.cpu.available}}
-</mat-grid-tile>
-<mat-grid-tile [style.background-color.maroon]="isDanger('cpu')">
-  {{ node.cpu.used / node.cpu.available | percent }}
-</mat-grid-tile>
+</div>
+<div style="grid-column: 3;" [style.background-color.maroon]="isDanger('cpu')">
+    {{ node.cpu.used / node.cpu.available | percent }}
+  </div>
 
 
-<mat-grid-tile [style.background-color.maroon]="isDanger('mem')">
+<div style="grid-column: 4;" [style.background-color.maroon]="isDanger('mem')">
   {{node.mem.used}} / {{node.mem.available}}
-</mat-grid-tile>
-<mat-grid-tile [style.background-color.maroon]="isDanger('mem')">
-  {{ node.mem.used / node.mem.available | percent }}
-</mat-grid-tile>
+</div>
+<div style="grid-column: 5;" [style.background-color.maroon]="isDanger('mem')">
+    {{ node.mem.used / node.mem.available | percent }}
+  </div>
 
-
-<mat-grid-tile>
+<div style="grid-column: 6;">
   <button mat-raised-button color="warn">View</button>
-</mat-grid-tile>
+</div> -->

@@ -2,7 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { INode } from '../dashboard/dashboard.component';
 
 @Component({
-  selector: 'app-nodes-row',
+  // tslint:disable-next-line:component-selector
+  selector: '[app-nodes-row]',
   templateUrl: './nodes-row.component.html',
   styleUrls: ['./nodes-row.component.scss']
 })

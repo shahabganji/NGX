@@ -1,0 +1,19 @@
+.nodes{
+  display: grid;
+  grid-template: repeat(6, 20%);
+  grid-auto-rows: max-content;
+  grid-auto-flow: row dense;
+
+  width: 85%;
+  margin: 0 auto;
+}
+
+.content{
+  display: grid;
+  grid-template: repeat(6, 20%);
+  grid-auto-rows: max-content;
+  grid-auto-flow: row dense;
+
+  width: 85%;
+  margin: 0 auto;
+}
