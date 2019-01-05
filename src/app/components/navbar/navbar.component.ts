@@ -8,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   // tslint:disable-next-line:no-output-on-prefix
-  @Output() onRefresh: EventEmitter<null> = new EventEmitter<null>();
+  @Output() onRefresh: EventEmitter<Date> = new EventEmitter<Date>();
 
   constructor() { }
 
@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
   }
 
   refresh() {
-      this.onRefresh.emit();
+      this.onRefresh.emit(new Date());
   }
 
 }

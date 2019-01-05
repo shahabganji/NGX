@@ -1,9 +1,11 @@
+<ng-template #alertBox></ng-template>
 <!--The content below is only a placeholder and can be replaced.-->
 
-<app-navbar (onRefresh)="refreshData()"></app-navbar>
+<app-navbar (onRefresh)="alert($event)"></app-navbar>
 
 <br />
 
 <main class="mdl-layout__content" style="padding: 20px;">
-  <app-dashboard #dashboard></app-dashboard>
+  <app-dashboard></app-dashboard>
 </main>
+

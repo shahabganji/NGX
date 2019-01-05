@@ -17,6 +17,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MetricComponent } from './components/metric/metric.component';
 import { NodesComponent } from './components/nodes/nodes.component';
 import { NodesRowComponent } from './components/nodes-row/nodes-row.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 @NgModule({
   // list of allowed components inside this module
@@ -26,7 +27,8 @@ import { NodesRowComponent } from './components/nodes-row/nodes-row.component';
     NavbarComponent,
     MetricComponent,
     NodesComponent,
-    NodesRowComponent
+    NodesRowComponent,
+    AlertComponent
   ],
   // list of other modules that this module depends upon
   imports: [
@@ -48,6 +50,10 @@ import { NodesRowComponent } from './components/nodes-row/nodes-row.component';
 
     HttpClientModule
 
+  ],
+  // for dynamic components
+  entryComponents: [
+    AlertComponent
   ],
   // list of services that this module depends upon
   providers: [
